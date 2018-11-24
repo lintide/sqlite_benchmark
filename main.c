@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
     sqlite3_open("testdb.db" ,&db);
     sqlite3_exec(db,"drop table if exists t1",0,0,0);  
     sqlite3_exec(db,"create table t1(id integer,x integer,y integer ,weight real)",0,0,0);
-    int count = 10000;
+    int count = 1000000;
 
     clock_t start_t, end_t, total_t;
     start_t = clock();
