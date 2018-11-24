@@ -38,10 +38,10 @@ void insert_use_prestmt(sqlite3 *db, int count) {
       
     for(int i=0;i<count;++i)  
     {         
-        sqlite3_bind_int(stmt,1,2);  
-        sqlite3_bind_int(stmt,2,2);  
-        sqlite3_bind_int(stmt,3,2);  
-        sqlite3_bind_double(stmt,4,1.2);
+        sqlite3_bind_int(stmt,1,i);  
+        sqlite3_bind_int(stmt,2,i*2);  
+        sqlite3_bind_int(stmt,3,i+2);  
+        sqlite3_bind_double(stmt,4,i/2.0);
         sqlite3_step(stmt);
         sqlite3_reset(stmt);
         // printf("a");
